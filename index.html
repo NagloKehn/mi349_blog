@@ -72,7 +72,8 @@
 
     <section class="newsletter-signup">
         <h2>Subscribe to Our Newsletter</h2>
-        <form name="newsletter-signup" data-netlify="true">
+        <form name="newsletter-signup" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="newsletter-signup">
             <label for="email">Enter your email:</label>
             <input type="email" id="email" name="email" placeholder="your@email.com" required>
             <button type="submit">Subscribe</button>
