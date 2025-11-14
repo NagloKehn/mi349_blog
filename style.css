@@ -96,10 +96,12 @@ h3 {
 /* Images */
 img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 15px 0;
     border: 2px solid #00ff00;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+    display: block;
 }
 
 .about img {
@@ -139,6 +141,8 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     background: rgba(0, 0, 0, 0.5);
+    overflow-x: auto;
+    display: block;
 }
 
 table, th, td {
@@ -251,4 +255,271 @@ footer {
     border-top: 2px solid #00ff00;
     color: #00ff00;
     font-size: 0.9em;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet/Medium Screens - 768px and below */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    header {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 2px solid #00ff00;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 20px;
+        margin: 0 auto 20px;
+        border: 2px solid #00ff00;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+
+    h3 {
+        font-size: 1.1em;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .blog-post {
+        margin-bottom: 25px;
+        padding: 15px;
+    }
+
+    img {
+        margin: 10px 0;
+    }
+
+    .about img {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        font-size: 0.9em;
+        margin-bottom: 12px;
+    }
+
+    ul {
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    li {
+        font-size: 0.9em;
+        margin-bottom: 6px;
+    }
+
+    table {
+        font-size: 0.85em;
+        margin: 15px 0;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    form > div {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    label {
+        font-size: 0.95em;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .newsletter-signup {
+        padding: 20px;
+        margin: 0 auto 20px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.85em;
+    }
+}
+
+/* Mobile/Small Screens - 480px and below */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    header {
+        position: static;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #00ff00;
+    }
+
+    h1 {
+        font-size: 1.4em;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        text-shadow: 0 0 5px #00ff00;
+    }
+
+    nav ul {
+        gap: 5px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px;
+        text-align: center;
+        font-size: 0.85em;
+        border: 2px solid #00ff00;
+    }
+
+    main {
+        padding: 12px;
+        margin: 0 auto 15px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #00ff00;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    .blog-post {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    img {
+        margin: 8px 0;
+        border: 2px solid #00ff00;
+        width: 100%;
+    }
+
+    .about img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    p {
+        font-size: 0.85em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    strong {
+        color: #ffff00;
+    }
+
+    ul {
+        margin-left: 12px;
+        margin-bottom: 12px;
+    }
+
+    li {
+        font-size: 0.85em;
+        margin-bottom: 5px;
+    }
+
+    table {
+        font-size: 0.8em;
+        margin: 10px 0;
+        border: 1px solid #00ff00;
+    }
+
+    th, td {
+        padding: 6px;
+        border: 1px solid #00ff00;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    form > div {
+        flex: 1 1 100%;
+    }
+
+    label {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+        color: #ffff00;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        padding: 8px;
+        font-size: 16px;
+        border: 2px solid #00ff00;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .newsletter-signup {
+        padding: 12px;
+        margin: 0 auto 15px;
+        max-width: 100%;
+    }
+
+    .newsletter-signup h2 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
 }
